@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/.idea.GEP-Team-Yellow-Unity.iml
+/projectSettingsUpdater.xml
+/modules.xml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Uni work\Year2\GEP\Group Project\GEP-Team-Yellow-Unity\.idea\.idea.GEP-Team-Yellow-Unity\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
