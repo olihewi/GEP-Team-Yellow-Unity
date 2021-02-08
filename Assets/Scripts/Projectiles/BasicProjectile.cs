@@ -5,11 +5,11 @@ using UnityEngine;
 public class BasicProjectile : MonoBehaviour
 {
     public float movementSpeed = 1.0f;
-    public int damageTotal = 100;
+    public int damage = 1;
 
     private const float OutOfRange = 6.0f;
 
-    private UpdateUI ui;
+    public PlayerController owningPlayer;
 
     private void Update()
     {
@@ -17,7 +17,7 @@ public class BasicProjectile : MonoBehaviour
 
         if(transform.position.y >= OutOfRange)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 
@@ -25,10 +25,9 @@ public class BasicProjectile : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            ui.UpdateScore(damageTotal);
-
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
+            BasicEnemy enemy = other.GetComponent<BasicEnemy>();
+            enemy.Damage(damage, owningPlayer);
+            Destroy(gameObject);
         }
     }
 }

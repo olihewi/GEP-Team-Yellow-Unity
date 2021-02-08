@@ -144,4 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e871661383b44304cacc84c4ee8ce4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 16
+  damageTotal: 100
+  owningPlayer: {fileID: 0}

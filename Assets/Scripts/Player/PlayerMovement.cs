@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private PlayerController playerController;
+    
     public float movementSpeed = 1.0f;
     public GameObject projectileObject;
 
+    private void Start()
+    {
+        playerController = GetComponent<PlayerController>();
+    }
     private void Update()
     {
         GetInput();
