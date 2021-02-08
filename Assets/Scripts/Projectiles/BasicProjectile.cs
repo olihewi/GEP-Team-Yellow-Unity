@@ -25,7 +25,7 @@ public class BasicProjectile : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            ui.UpdateScore(damageTotal);
+//            ui.UpdateScore(damageTotal);
 
             Destroy(other.gameObject);
             Destroy(this.gameObject);
