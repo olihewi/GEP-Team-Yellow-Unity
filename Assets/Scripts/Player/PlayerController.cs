@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public float fireRate = 0.5f;
     private float timeLastProjectileFired = 0;
     public int numberOfProjectiles = 1; // Could be used for power-ups
-    private int score = 0;
+    public int score = 0;
 
     [Header("UI")]
     public UpdateUI scoreUI;
@@ -67,8 +67,9 @@ public class PlayerController : MonoBehaviour
     public void AddScore(int _score)
     {
         score += _score;
-        scoreUI.UpdateScore(score);
+        scoreUI.UpdateScore();
     }
+
     private void OnDestroy()
     {
         playerControllers.Remove(this);
