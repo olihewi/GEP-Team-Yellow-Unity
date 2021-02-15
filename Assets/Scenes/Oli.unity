@@ -590,6 +590,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 1
   scoreReward: 1
+  commandSequence:
+    looping: 1
+    commands:
+    - movement:
+        points:
+        - {x: -5, y: 5}
+        - {x: 0, y: 0}
+        - {x: 5, y: 5}
+      duration: 3
+    - movement:
+        points:
+        - {x: 5, y: 5}
+        - {x: 0, y: 0}
+        - {x: -5, y: 5}
+      duration: 3
 --- !u!1 &2076107826
 GameObject:
   m_ObjectHideFlags: 0

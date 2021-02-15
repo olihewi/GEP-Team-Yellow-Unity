@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     }
     private void ProcessInput()
     {
-        Vector3 moveInput = new Vector3(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"),0);
+        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
         bool shootInput = Input.GetButton("Shoot");
 
         if (movementEnabled)
@@ -46,9 +46,9 @@ public class PlayerController : MonoBehaviour
             Shoot();
         }
     }
-    private void ProcessMovement(Vector3 moveInput)
+    private void ProcessMovement(Vector2 moveInput)
     {
-        transform.position += moveInput * (movementSpeed * Time.deltaTime);
+        transform.position += new Vector3(moveInput.x,moveInput.y,0) * (movementSpeed * Time.deltaTime);
     }
     private void Shoot()
     {

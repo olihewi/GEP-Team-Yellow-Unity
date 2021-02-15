@@ -18,8 +18,10 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="BezierCurve.cs" t="Include" />
           <e p="Enemy" t="Include">
             <e p="BasicEnemy.cs" t="Include" />
+            <e p="Command.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="PlayerController.cs" t="Include" />
