@@ -21,12 +21,12 @@ public class PlayerController : MonoBehaviour
     [Header("UI")]
     public UpdateUI scoreUI;
 
-    private Collider2D collider;
+    private Collider2D playerCollider;
     
     private void Start()
     {
         playerControllers.Add(this);
-        collider = GetComponent<Collider2D>();
+        playerCollider = GetComponent<Collider2D>();
     }
     private void Update()
     {
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         float thisTime = Time.time; // Method of getting bullet cooldown without timers
         if (!(thisTime >= timeLastProjectileFired + 1/fireRate)) return; // Don't fire if the cooldown isn't over
-        float playerWidth = numberOfProjectiles == 1 ? 0 : collider.bounds.size.x * 0.75f;
+        float playerWidth = numberOfProjectiles == 1 ? 0 : playerCollider.bounds.size.x * 0.75f;
         for (int projectile = 0; projectile < numberOfProjectiles; projectile++) // Support for multiple bullets (power-up)
         {
             Vector3 thisPosition = transform.position + new Vector3(-playerWidth/2 + projectile / (float)numberOfProjectiles * playerWidth*2,0,0);

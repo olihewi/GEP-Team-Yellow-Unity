@@ -464,6 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c803b6b5f2b8d42a685aade0cc1acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 2076107827}
   scoreText: {fileID: 1552456804}
 --- !u!1 &1899739807
 GameObject:
@@ -625,6 +626,7 @@ MonoBehaviour:
     type: 3}
   fireRate: 4
   numberOfProjectiles: 1
+  score: 0
   scoreUI: {fileID: 1552456806}
 --- !u!212 &2076107828
 SpriteRenderer:
