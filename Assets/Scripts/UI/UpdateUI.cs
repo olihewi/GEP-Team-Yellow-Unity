@@ -5,16 +5,15 @@ using UnityEngine.UI;
 
 public class UpdateUI : MonoBehaviour
 {
-    public PlayerController playerController;
     public Text scoreText;
 
     private void Awake()
     {
-        UpdateScore();
+        UpdateScore(0);
     }
 
-    public void UpdateScore()
+    public void UpdateScore(int score)
     {
-        scoreText.text = "Score: " + playerController.score;
+        scoreText.text = "Score: " + score;
     }
 }
