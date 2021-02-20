@@ -62,4 +62,5 @@ public class BasicEnemy : Ship
       }
     }
   }
+  public override void OnDestroyOther(Ship _other) {}
 }

@@ -22,11 +22,7 @@
     <list default="true" id="eafa6f3e-2564-4703-8101-9338a1ee3cdf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GEP-Team-Yellow-Unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GEP-Team-Yellow-Unity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GEP-Team-Yellow-Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GEP-Team-Yellow-Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Oli.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Oli.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/BasicProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/BasicProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpdateUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UpdateUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +35,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerShip.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BezierCurve.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelScroll.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Command.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -55,6 +52,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShip.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/BasicProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ship.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelScroll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicEnemy.cs" />
       </list>
     </option>
@@ -102,7 +100,7 @@
       <workItem from="1612887667623" duration="1235000" />
       <workItem from="1613391012629" duration="6267000" />
       <workItem from="1613737436308" duration="2904000" />
-      <workItem from="1613826620401" duration="6751000" />
+      <workItem from="1613826620401" duration="8247000" />
     </task>
     <servers />
   </component>

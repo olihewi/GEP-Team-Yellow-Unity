@@ -17,8 +17,8 @@ public class Ship : MonoBehaviour
         currentHealth -= _damage;
         if (currentHealth <= 0)
         {
-            _attacker.OnDestroyOther(this);
             Destroy(gameObject);
+            _attacker.OnDestroyOther(this);
         }
     }
 
