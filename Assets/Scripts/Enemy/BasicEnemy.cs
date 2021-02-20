@@ -1,43 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class BasicEnemy : MonoBehaviour
+public class BasicEnemy : Ship
 {
-  public int healthPoints = 1;
-  public int scoreReward = 1;
-
-  public CommandSequence commandSequence;
+  public CommandSequence movementSequence;
   private int currentCommandIndex;
-  private float commandTimer = 0;
+  private float commandTimer;
+  public FirePattern firePattern;
+  private int currentFirePatternIndex;
+  private float fireTimer;
 
-  public void Damage(int _damage, PlayerController _player)
-  {
-    healthPoints -= _damage;
-    if (healthPoints <= 0)
-    {
-      _player.AddScore(scoreReward);
-      Destroy(gameObject);
-    }
-  }
 
   private void Update()
   {
-    if (currentCommandIndex < commandSequence.commands.Count)
+    CommandSequenceStep();
+    FirePatternStep();
+  }
+
+  private void CommandSequenceStep()
+  {
+    if (currentCommandIndex < movementSequence.commands.Count)
     {
-      Vector2 thisPos = commandSequence.commands[currentCommandIndex].movement.GetPoint(commandTimer / commandSequence.commands[currentCommandIndex].duration);
+      Vector2 thisPos = movementSequence.commands[currentCommandIndex].movement.GetPoint(commandTimer / movementSequence.commands[currentCommandIndex].duration);
       Vector3 moveVector = new Vector3(thisPos.x, thisPos.y, 0);
       transform.position = moveVector;
-      if (commandTimer >= commandSequence.commands[currentCommandIndex].duration)
+      if (commandTimer >= movementSequence.commands[currentCommandIndex].duration)
       {
         currentCommandIndex++;
         commandTimer = 0;
-        if (currentCommandIndex >= commandSequence.commands.Count && commandSequence.looping)
+        if (currentCommandIndex >= movementSequence.commands.Count && movementSequence.looping)
         {
           currentCommandIndex = 0;
         }
       }
       commandTimer += Time.deltaTime;
+    }
+  }
+  private void FirePatternStep()
+  {
+    if (currentFirePatternIndex < firePattern.sequences.Count)
+    {
+      foreach (FirePatternElement element in firePattern.sequences[currentFirePatternIndex].elements)
+      {
+        if (fireTimer <= element.time && fireTimer + Time.deltaTime >= element.time)
+        {
+          BasicProjectile bullet = Instantiate(element.projectile, transform.position, Quaternion.Euler(0, 0, element.rotation));
+          bullet.collisionTag = "Player";
+        }
+      }
+      fireTimer += Time.deltaTime;
+      if (fireTimer >= firePattern.sequences[currentFirePatternIndex].duration)
+      {
+        currentFirePatternIndex++;
+        fireTimer = 0;
+        if (currentFirePatternIndex >= firePattern.sequences.Count)
+        {
+          currentFirePatternIndex = 0;
+        }
+      }
     }
   }
 }

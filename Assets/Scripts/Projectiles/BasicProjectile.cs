@@ -4,29 +4,32 @@ using UnityEngine;
 
 public class BasicProjectile : MonoBehaviour
 {
+    public string collisionTag = "Enemy";
     public float movementSpeed = 1.0f;
-    public int damage = 1;
+    public float damage = 1;
 
-    private const float OutOfRange = 6.0f;
-
-    public PlayerController owningPlayer;
+    public Ship owner;
 
     private void Update()
     {
-        transform.position += new Vector3(0, movementSpeed, 0) * Time.deltaTime;
+        transform.position += transform.up * (movementSpeed * Time.deltaTime);
 
-        if(transform.position.y >= OutOfRange)
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Enemy")
+        if(other.gameObject.tag == collisionTag)
         {
-            BasicEnemy enemy = other.GetComponent<BasicEnemy>();
-            enemy.Damage(damage, owningPlayer);
+            Ship hit = other.GetComponent<Ship>();
+            hit.Damage(damage, owner);
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "MainCamera")
+        {
             Destroy(gameObject);
         }
     }

@@ -22,14 +22,17 @@
           <e p="Enemy" t="Include">
             <e p="BasicEnemy.cs" t="Include" />
             <e p="Command.cs" t="Include" />
+            <e p="FirePattern.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
+            <e p="PlayerShip.cs" t="Include" />
           </e>
           <e p="Projectiles" t="Include">
             <e p="BasicProjectile.cs" t="Include" />
           </e>
+          <e p="Ship.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="MainMenu.cs" t="Include" />
             <e p="UpdateUI.cs" t="Include" />
