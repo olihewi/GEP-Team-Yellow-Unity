@@ -7,21 +7,25 @@ public class Ship : MonoBehaviour
     public float maxHealth = 1;
     public int scoreReward = 1;
     private float currentHealth;
-    public GameOverScript gameOver;
 
     private void Awake()
     {
         currentHealth = maxHealth;
     }
+
     public void Damage(float _damage, Ship _attacker)
     {
         currentHealth -= _damage;
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
-            _attacker.OnDestroyOther(this);
-            
+            onDeath(_attacker);
         }
+    }
+
+    public virtual void onDeath(Ship _attacker)
+    {
+        Destroy(gameObject);
+        _attacker.OnDestroyOther(this);
     }
 
     public virtual void OnDestroyOther(Ship _other) {}
