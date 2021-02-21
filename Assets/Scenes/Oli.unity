@@ -461,7 +461,7 @@ PrefabInstance:
     - target: {fileID: 8914266901667410137, guid: 328a1fb0b9689db47b934150fd4161af,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8914266901667410137, guid: 328a1fb0b9689db47b934150fd4161af,
         type: 3}
@@ -535,7 +535,7 @@ PrefabInstance:
     - target: {fileID: 3503462577497587100, guid: a7a904d45600d5842b047b578aaa04da,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3503462577497587100, guid: a7a904d45600d5842b047b578aaa04da,
         type: 3}
@@ -862,7 +862,7 @@ MonoBehaviour:
   movementEnabled: 1
   projectileObject: {fileID: 9137169562802274061, guid: b6da2564d65f0234cb6e4de4cd998b03,
     type: 3}
-  fireRate: 4
-  numberOfProjectiles: 1
+  fireRate: 8
+  numberOfProjectiles: 2
   score: 0
   scoreUI: {fileID: 1552456806}
