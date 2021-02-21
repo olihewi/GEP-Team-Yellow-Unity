@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3503462577497587102}
   - component: {fileID: 3503462577497587101}
   m_Layer: 0
-  m_Name: BurstFire
+  m_Name: Spiral
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,27 +129,57 @@ MonoBehaviour:
     commands:
     - movement:
         points:
-        - {x: -5, y: 3}
-        - {x: 5, y: 3}
-      duration: 2
-    - movement:
-        points:
-        - {x: 5, y: 3}
-        - {x: -5, y: 3}
-      duration: 2
+        - {x: 0, y: 3}
+      duration: 1
   firePattern:
     sequences:
     - elements:
-      - rotation: 180
+      - rotation: 0
         time: 0
         projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
           type: 3}
-      - rotation: 180
+      - rotation: 30
+        time: 0.1
+        projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
+          type: 3}
+      - rotation: 60
         time: 0.2
         projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
           type: 3}
-      - rotation: 180
+      - rotation: 90
+        time: 0.3
+        projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
+          type: 3}
+      - rotation: 120
         time: 0.4
         projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
           type: 3}
-      duration: 1
+      - rotation: 150
+        time: 0.5
+        projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
+          type: 3}
+      - rotation: 180
+        time: 0.6
+        projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
+          type: 3}
+      - rotation: 210
+        time: 0.8
+        projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
+          type: 3}
+      - rotation: 240
+        time: 1
+        projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
+          type: 3}
+      - rotation: 270
+        time: 1.2
+        projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
+          type: 3}
+      - rotation: 300
+        time: 1.4
+        projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
+          type: 3}
+      - rotation: 330
+        time: 1.6
+        projectile: {fileID: 9137169562802274061, guid: 1f9bd19d89f82ab4e8ead7d9b44a5b95,
+          type: 3}
+      duration: 1.8
