@@ -7,6 +7,7 @@ public class Ship : MonoBehaviour
     public float maxHealth = 1;
     public int scoreReward = 1;
     private float currentHealth;
+    public GameOverScript gameOver;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class Ship : MonoBehaviour
         {
             Destroy(gameObject);
             _attacker.OnDestroyOther(this);
+            
         }
     }
 
