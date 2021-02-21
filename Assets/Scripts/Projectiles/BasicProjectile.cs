@@ -28,7 +28,7 @@ public class BasicProjectile : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "MainCamera")
+        if (other.gameObject.tag == "Level Bounds")
         {
             Destroy(gameObject);
         }

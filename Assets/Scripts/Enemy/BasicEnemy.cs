@@ -11,12 +11,20 @@ public class BasicEnemy : Ship
   public FirePattern firePattern;
   private int currentFirePatternIndex;
   private float fireTimer;
+  private bool startedMovement = false;
 
 
+  public void startMovement()
+  {
+    startedMovement = true;
+  }
   private void Update()
   {
-    CommandSequenceStep();
-    FirePatternStep();
+    if (startedMovement)
+    {
+      CommandSequenceStep();
+      FirePatternStep();
+    }
   }
 
   private void CommandSequenceStep()
@@ -25,7 +33,7 @@ public class BasicEnemy : Ship
     {
       Vector2 thisPos = movementSequence.commands[currentCommandIndex].movement.GetPoint(commandTimer / movementSequence.commands[currentCommandIndex].duration);
       Vector3 moveVector = new Vector3(thisPos.x, thisPos.y, 0);
-      transform.position = moveVector;
+      transform.localPosition = moveVector;
       if (commandTimer >= movementSequence.commands[currentCommandIndex].duration)
       {
         currentCommandIndex++;
