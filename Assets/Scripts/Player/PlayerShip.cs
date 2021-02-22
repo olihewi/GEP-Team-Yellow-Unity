@@ -16,6 +16,7 @@ public class PlayerShip : Ship
   public int score = 0;
   
   [Header("UI")]
+  public GameOverScript gameOver;
   public UpdateUI scoreUI;
   
   private Collider2D playerCollider;
@@ -43,9 +44,16 @@ public class PlayerShip : Ship
     timeLastProjectileFired = thisTime;
   }
 
+  public override void onDeath(Ship _attacker)
+  {
+      Destroy(gameObject);
+      gameOver.gameObject.SetActive(true);
+      gameOver.Setup(score);
+  }
+
   public override void OnDestroyOther(Ship _other)
   {
-    AddScore(_other.scoreReward);
+      AddScore(_other.scoreReward);
   }
   
   public void AddScore(int _score)
