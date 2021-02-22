@@ -6,4 +6,5 @@ Team Members:
 - <b>stan-davis</b>: Stan Davis, 19022975
 
 Using Unity Version 2020.2.3f1
+
 Build files can be found under the Releases tab.
